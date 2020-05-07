@@ -1,7 +1,8 @@
 class Song {
   int id;
+  String name;
   String path;
-  bool isFav;
+  int isFav;
 
-  Song({this.id, this.path, this.isFav});
+  Song({this.id, this.isFav, this.name, this.path});
 }

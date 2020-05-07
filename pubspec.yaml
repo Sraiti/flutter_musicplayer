@@ -24,8 +24,14 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   path: ^1.6.4
-  path_provider: ^1.6.5
-  assets_audio_player: ^1.3.0
+  path_provider: ^0.4.1
+  audioplayers: ^0.7.8
+  sqflite: ^1.2.0
+  splashscreen: ^1.2.0
+  provider: ^4.0.5+1
+  url_launcher: ^5.4.2
+  share: ^0.6.4+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -42,12 +48,12 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - asset/images/
-    - asset/songs/
+    - assets/images/
+    - assets/songs/
   fonts:
     - family: FiraSans
       fonts:
-         - asset: asset/fonts/FiraSans-Regular.ttf
+         - asset: assets/fonts/FiraSans-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

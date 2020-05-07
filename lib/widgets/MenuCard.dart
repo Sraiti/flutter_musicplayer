@@ -11,6 +11,7 @@ class MenuCard extends StatelessWidget {
   final Color color;
   final Function function;
   final List<bool> position;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(

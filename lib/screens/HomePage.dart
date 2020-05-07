@@ -1,21 +1,26 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_musicplayer/screens/MusicList.dart';
+import 'package:flutter_musicplayer/widgets/Drawer.dart';
 import 'package:flutter_musicplayer/widgets/MenuCard.dart';
 
 import '../Constants.dart';
 
 class MyHomePage extends StatelessWidget {
   static final String id = "HomePage";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      extendBodyBehindAppBar: true,
+
+       body: Stack(
         children: <Widget>[
           SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: Image.asset(
-              'asset/images/back.png',
+              'assets/images/back.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -25,9 +30,9 @@ class MyHomePage extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(25.0),
                   child: Container(
-                    decoration: BoxDecoration(
+                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("asset/images/artist.jpg"),
+                        image: AssetImage("assets/images/artist.jpg"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(180.0)),
@@ -66,7 +71,7 @@ class MyHomePage extends StatelessWidget {
                           },
                         ),
                         SizedBox(
-                          width: 4.0,
+                          width: 3.0,
                         ),
                         MenuCard(
                           text: "My List",
@@ -87,7 +92,7 @@ class MyHomePage extends StatelessWidget {
                           position: [false, true],
                         ),
                         SizedBox(
-                          width: 4.0,
+                          width: 3.0,
                         ),
                         MenuCard(
                           text: "Share",
@@ -111,9 +116,14 @@ class MyHomePage extends StatelessWidget {
                           SizedBox(
                             width: 2.0,
                           ),
-                          Text(
-                            "Privacy policy",
-                            style: KPrivacyStyle,
+                          GestureDetector(
+                            onTap:(){
+
+                            } ,
+                            child: Text(
+                              "Privacy policy",
+                              style: KPrivacyStyle,
+                            ),
                           ),
                         ],
                       ),
